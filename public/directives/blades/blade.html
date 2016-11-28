@@ -1,0 +1,57 @@
+<article class="cnt">
+    <div class="blade" ng-repeat="blade in blades">
+        <header class="blade-head">
+            <div class="blade-status">
+                <div class="status-message" ng-if="blade.error"></div>
+                <div class="progress-bar __loaded"></div>
+            </div>
+            <div class="blade-nav">
+                <ul class="menu __inline">
+                    <!--<li class="menu-item">
+                        <button>
+                            <i class="btn-ico fa fa-thumb-tack"></i>
+                        </button>
+                    </li>-->
+                    <li class="menu-item __minimize">
+                        <button>
+                            <!--{{ 'platform.commands.mnimize' | translate }}-->
+                        </button>
+                    </li>
+                    <li class="menu-item __maximize">
+                        <button>
+                            <!--{{ 'platform.commands.maximize' | translate }}-->
+                        </button>
+                    </li>
+                    <li class="menu-item __close">
+                        <button>
+                            <!--{{ 'platform.commands.close' | translate }}-->
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="blade-t" class="__secondary">
+                <i class="blade-t_ico fa fa-user">
+                    <i ng-if="blade.headIcon == 'fa-user'"></i>
+                </i>
+                <p class="blade-t_head">This is a header</p>
+                <p class="blade-t_subhead">This is a subtitle of the blade</p>
+            </div>
+        </header>
+        <div class="blade-container">
+            <div class="blade-content">
+                <div class="blade-inner">
+                    <div class="inner-block">
+                        <br>
+                        <button ng-click="newBlade()">NEw</button>
+                        <hr>
+                        <form>
+                            <input class="form-control" ng-model="blade.name">
+                            <br>
+                            <button class="btn btn-primary" ng-click="submitForm(blade.name)">Ok!</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

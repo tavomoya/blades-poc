@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+
+</head>
+
+<body ng-app="blades-poc" ng-controller="NavCtrl">
+    <nav class="navbar navbar-inverse">
+        <div class="container fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Blades - Proof of Concept </a>
+            </div>
+            <!--<button class="btn btn-default navbar-btn" ng-if="username" ng-click="leaveRoom()">Leave Room</button>-->
+        </div>
+    </nav>
+    <nav class="nav-bar">
+        <ul class="menu bar">
+            <li class="menu-item">
+                <a class="menu-link" ng-if="!menuItem.template" href="">
+                    <!--<span class="menu-ico" ng-class="menuItem.icon"></span>-->
+                    <span class="name" ng-click="launchBlade()">Menu ITem</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <blade blades="blades"></blade>
+
+    <div ng-view="" class="col-xs-12"></div>
+
+    <!-- Bower -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!--End of Bower -->
+
+    <script src="app.js"></script>
+    <script src="scripts/nav.js"></script>
+    <script src="directives/blades/blade.js"></script>
+
+
+</body>
+
+</html>

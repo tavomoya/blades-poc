@@ -1,0 +1,13 @@
+{
+  "name": "blades-poc",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "node server.js",
+    "start-dev": "DEBUG=* nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "q": "^1.4.1"
+  }
+}
